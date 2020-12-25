@@ -1,8 +1,8 @@
 server:
-  port: 80
+  port: 8001
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
 
@@ -13,10 +13,5 @@ spring:
     url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
-
-ribbon:
-  ReadTimeout: 5000
-  ConnectTimeout: 5000
-logging:
-  level:
-    com.atguigu.springcloud.service.PaymentFeignService: debug
+  application:
+    name: cloud-provider-hystrix-payment
