@@ -45,6 +45,8 @@ public class OrderHystrixController {
     public String payment_Global_FallbackMethod(){
         return "o(╥﹏╥)o出现异常";
     }
+
+
 }
 
 
